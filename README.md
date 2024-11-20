@@ -58,7 +58,9 @@ where $f$ is the following feed-forward network with a single hidden layer:
 f(u(C_k),u(T_k))= a^{T} tanh(W_2U+b),
 ```
 
-where $a \in ℝ^d$ is the weight vector to obtain a scalar as a result of applying $f$ and $W_2 \in ℝ^{r x 2d}$ is the weight matrix, $U \in ℝ^{2d x 1}$ is the matrix obtained by first putting each entry of $u(C_k)$ in rows by obeying the order of it, and then doing same process for $u(T_k)$. Moreover, $b \in ℝ^d$ is the bias and $r$ is tehe dimension size of the hidden layer. 
+where $a \in ℝ^d$ is the weight vector to obtain a scalar as a result of applying $f$ and $W_2 \in ℝ^{r x 2d}$ is the weight matrix, $U \in ℝ^{2d x 1}$ is the matrix obtained by first putting each entry of $u(C_k)$ in rows by obeying the order of it, and then doing same process for $u(T_k)$. Moreover, $b \in ℝ^d$ is the bias and $r$ is the dimension size of the hidden layer.
+
+### Neighboring Substructure Interaction Aggregation
 
 ## 2.2. Our interpretation
 
