@@ -43,7 +43,7 @@ denote the new representation of $u(C_k)$ obtained from neighbor aggregation and
 To create it, we need to take all feature embeddings of neighbors of the node $C_k$ into account as follows:
 
 ```math 
-u(C_k)^'{}_{sa} = \sum_{T_k \in N(C_k)} \alpha(C_k,T_k) W_1 u(T_k) + \alpha(C_k,C_k) W_1 u(C_k),
+u(C_k)^{'}_{sa} = \sum_{T_k \in N(C_k)} \alpha(C_k,T_k) W_1 u(T_k) + \alpha(C_k,C_k) W_1 u(C_k),
 ```
 
 where $W_1 \in ℝ^{d' x d}$ is a shared weight matrix with the desired dimension $d'$ of $u(C_k)^{'}_{sa}$.
