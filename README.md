@@ -58,6 +58,8 @@ where $f$ is the following feed-forward network with a single hidden layer:
 f(u(C_k),u(T_k))= a^{T} tanh(W_2U+b),
 ```
 
+where $a \in ℝ^d$ is the weight vector to obtain a scalar as a result of applying $f$, $W_2 \in ℝ^{r x 2d}$ is the weight matrix and $U \in ℝ^{2d x 1}$ is the matrix obtained by first putting each entry of $u(C_k)$ in rows by obeying the order of it, and then doing same process for $u(T_k)$. Moreover, $b \in ℝ^d$ is the bias and $r$ is tehe dimension size of the hidden layer. 
+
 ## 2.2. Our interpretation
 
 @TODO: Explain the parts that were not clearly explained in the original paper and how you interpreted them.
