@@ -40,13 +40,17 @@ denote the new representation of $u(C_k)$ obtained from neighbor aggregation and
 
 ### Neighboring Substructure Aggregation
 
-To create it, we need to take all feature embeddings of neighbors of the node $C_k$ into account as follows:
+To create it, we need to take all feature embeddings of neighbors of the node $C_k$ into account using attention mechanism:
 
 ```math 
 u(C_k)^{'}_{sa} = \sum_{T_k \in N(C_k)} \alpha(C_k,T_k) W_1 u(T_k) + \alpha(C_k,C_k) W_1 u(C_k),
 ```
 
-where $W_1 \in ℝ^{d' x d}$ is a shared weight matrix with the desired dimension $d'$ of $u(C_k)^{'}_{sa}$.
+where $W_1 \in ℝ^{d' x d}$ is a shared weight matrix with the desired dimension $d'$ of $u(C_k)^{'}_{sa}$ and $\alpha(C_k,T_k)$ is the attention coefficient which is computed as follows:
+
+```math 
+\alpha(C_k,T_k) = \frac{exp(f(u(C_k),u(T_k)))}{sum_{T_k \in N(C_k) \cup {C_k}} exp(f(u(C_k),u(T_k)))},
+```
 
 ## 2.2. Our interpretation
 
