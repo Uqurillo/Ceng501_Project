@@ -49,7 +49,7 @@ u(C_k)^{'}_{sa} = \sum_{T_k \in N(C_k)} \alpha(C_k,T_k) W_1 u(T_k) + \alpha(C_k,
 where $W_1 \in ℝ^{d' x d}$ is a shared weight matrix with the desired dimension $d'$ of $u(C_k)^{'}_{sa}$ and $\alpha(C_k,T_k)$ is the attention coefficient which is computed as follows:
 
 ```math 
-\alpha(C_k,T_k) = \frac{exp(f(u(C_k),u(T_k)))}{\sum_{T_k \in N(C_k) \cup \\{C_k\\}} exp(f(u(C_k),u(T_k)))},
+\alpha(C_k,T_k) = \frac{exp(f(u(C_k),u(T_k)))}{\sum_{T_k \in N(C_k) \cup \\{ C_k \\} } exp(f(u(C_k),u(T_k)))},
 ```
 
 ## 2.2. Our interpretation
