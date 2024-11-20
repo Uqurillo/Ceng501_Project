@@ -25,6 +25,10 @@ $$N(C_k)=\\{T_k \in V(G)^k | |C_k \bigcap T_k| = k-1\\}.$$
 
 With this definition, we can create higher-order graphs for $k \geq 2$. The next step is to initialize node features of 1-order and higher order graphs. For $i \in V(G)$, the feature embedding $u_i \in ℝ^d$ is the concatanation of two one-hot vectors $e_i \in ℝ^{d_1}$ and $a_i \in ℝ^{d_2}$ based on label and attributes of the node $i$, respectively. Note that $d=d_1+d_2$. For node $C_k$ where $k \geq 2$, $u(C_k)=(1/k)\sum_{C_1 \in C_K} u(C_1)$, that is, $u(C_k)$ is just the average of feature embeddings of the nodes that constitute it.
 
+```math
+a + b = c
+```
+
 ## 2.2. Our interpretation
 
 @TODO: Explain the parts that were not clearly explained in the original paper and how you interpreted them.
