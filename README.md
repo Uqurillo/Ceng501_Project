@@ -26,7 +26,7 @@ $$N(C_k)=\\{T_k \in V(G)^k | |C_k \bigcap T_k| = k-1\\}.$$
 With this definition, we can create higher-order graphs for $k \geq 2$. The next step is to initialize node features of 1-order and higher order graphs. For $i \in V(G)$, the feature embedding $u_i \in ℝ^d$ is the concatanation of two one-hot vectors $e_i \in ℝ^{d_1}$ and $a_i \in ℝ^{d_2}$ based on label and attributes of the node $i$, respectively. Note that $d=d_1+d_2$. For node $C_k$ where $k \geq 2$,
 
 ```math
-u(C_k)=\frac{1}{k}\sum_{C_1 \in C_K} u(C_1),
+u(C_k)=\frac{1}{k}\sum_{C_1 \in C_k} u(C_1),
 ```
 that is, $u(C_k)$ is just the average of feature embeddings of the nodes that constitute it.
 
@@ -36,7 +36,17 @@ Second step of the method includes Substructure Interaction Attention (SIA) Laye
 u(C_k)^{'}_{sa} \textrm{ and } u(C_k)^{'}_{ia}
 ```
 
-denote the new representation obtained from neighbor aggregation and neighbor interaction aggregation, respectively.
+denote the new representation of $u(C_k)$ obtained from neighbor aggregation and neighbor interaction aggregation, respectively.
+
+### Neighboring Substructure Aggregation
+
+To create it, we need to take all feature embeddings of neighbors of the node $C_k$ into account as follows:
+
+```math 
+u(C_k)^{'}_{sa} = \sum_{T_k \in N(C_k)} \alpha(C_k,T_k) W_1 u(T_k) + \alpha(C_k,C_k) W_1 u(C_k),
+```
+
+where $W_1 \in $
 
 ## 2.2. Our interpretation
 
