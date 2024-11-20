@@ -46,7 +46,7 @@ To create it, we need to take all feature embeddings of neighbors of the node $C
 u(C_k)^{'}_{sa} = \sum_{T_k \in N(C_k)} \alpha(C_k,T_k) W_1 u(T_k) + \alpha(C_k,C_k) W_1 u(C_k),
 ```
 
-where $W_1 \in $
+where $W_1 \in ℝ^{d' x d}$ is a shared weight matrix with the desired dimension $d'$ of $u(C_k)^{'}_{sa}$.
 
 ## 2.2. Our interpretation
 
