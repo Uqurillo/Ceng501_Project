@@ -52,6 +52,12 @@ where $W_1 \in ℝ^{d' x d}$ is a shared weight matrix with the desired dimensio
 \alpha(C_k,T_k) = \frac{exp(f(u(C_k),u(T_k)))}{\sum_{T_k \in N(C_k) \cup {C_k}} exp(f(u(C_k),u(T_k)))},
 ```
 
+where $f$ is the following feed-forward network with a single hidden layer:
+
+```math 
+f(u(C_k),u(T_k))= a^{T} tanh(W_2U+b),
+```
+
 ## 2.2. Our interpretation
 
 @TODO: Explain the parts that were not clearly explained in the original paper and how you interpreted them.
