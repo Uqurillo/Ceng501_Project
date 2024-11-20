@@ -33,7 +33,7 @@ that is, $u(C_k)$ is just the average of feature embeddings of the nodes that co
 Second step of the method includes Substructure Interaction Attention (SIA) Layer. The main aim is to train $u(C_k)$ for each substructure $C_k \in V(G)^k$ and it is done with the contribution of two parts: the neighbor structure aggregation (sa) and the neighbor interaction aggregation (ia). Let
 
 ```math 
-(u(C_k)^{'})_{sa} \textrm{and} (u(C_k)^{'})_{ia}
+(u(C_k)^{'})_{sa} \textrm{ and } (u(C_k)^{'})_{ia}
 ```
 
 denote the new representation obtained from neighbor aggregation and neighbor interaction aggregation, respectively.
