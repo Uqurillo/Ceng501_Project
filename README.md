@@ -115,6 +115,15 @@ u_G = \\{max_n (m_{n1}) || max_n (m_{n2}) || \dots || max_n (m_{nd})\\}
 $$
 
 for $n \in \\{1,2, \ldots, N\\}$.
+
+### 2.1.4. The Multilayer Perceptron and Output Layer
+
+We combine grpah-embeddings learned for different higher_order graphs. For a graph $G$, two graph-level embeddings $h_G$ and $u_G$ of it are obtained in the pooling layer. We concatenate them to obtain $f_G = h_G ||u_G$. Similarly, we can construct ${f_G}^(k)$ for $k$-order graph $G^(k)$ and concatenate all of them to obtain the final graph embedding $F_G$:
+
+$$
+F_G=\\{{f_G}^(1) || {f_G}^(2) || \ldots || {f_G}^(k)\\}.
+$$
+
 ## 2.2. Our interpretation
 
 @TODO: Explain the parts that were not clearly explained in the original paper and how you interpreted them.
