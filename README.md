@@ -98,14 +98,23 @@ To classify graphs, we need information based on graph embeddings. This paper fu
 
 ### SSA Pooling
 
-Suppose that the number of substructures in the graph $G$ is $N$. Note that $G$ doesn't imply the started graph, it can also be a $k$-order graph in this subsection. Let $V(G)$ denote the set of substructures in graph $G$ and $u_n \in ℝ^{1xd}$ show the substructure embedding of $n \in V(G)$. Then, the graph-level embedding $h_G$ is given as:
+Suppose that the number of substructures in the graph $G$ is $N$. Note that $G$ doesn't imply the started graph, that is, it can also be a $k$-order graph in this subsection. Let $V(G)$ denote the set of substructures in graph $G$ and $u_n \in ℝ^{1xd}$ show the substructure embedding of $n \in V(G)$. Then, the graph-level embedding $h_G$ is given as:
 
 ```math 
 h_G = \sum_{n=1}^N \sigma\big(u_n ReLU\big(W_3\big(u_n^T-\frac{1}{N}\sum_{m=1}^N u_m^T\big)\big)\big)u_n,
 ```
 
+where $W_3 \in ℝ^{dxd}$ is the learnable weight matrix.
 
+### Max Pooling
 
+Let $V_G \in ℝ^{Nxd}$ mean the matrix representation of substructure embeddings of $G$. We define $u_n=<m_{n1},m_{n2},\ldots,m_{nd}>$. The maximum pooling works on the matrix $V_G$ and takes the maximum of each column and concatenates all of them:
+
+```math 
+u_G = {max_n (m_{n1}) || max_n (m_{n2}) || \dots || max_n (m_{nd})}
+```
+
+for $n \in \\{1,2, \ldots, N\\}$.
 ## 2.2. Our interpretation
 
 @TODO: Explain the parts that were not clearly explained in the original paper and how you interpreted them.
