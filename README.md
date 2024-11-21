@@ -86,6 +86,12 @@ u(C_k)' = \sigma(\alpha u(C_k)^{'}_{sa} + (1-\alpha)u(C_k)^{'}_{ia}),
 
 where $\alpha$ is a parameter to balance information coming from two parts.
 
+### The Pooling Layer
+
+To classify graphs, we need information based on graph embeddings. This paper fulfills this need by utilizing two graph-level embedding methods: Stability-based Substructure Attention (SSA) pooling and the Max pooling to characterize global and local graph features, respectively.
+
+
+
 ## 2.2. Our interpretation
 
 @TODO: Explain the parts that were not clearly explained in the original paper and how you interpreted them.
