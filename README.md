@@ -73,8 +73,10 @@ where $*$ is the element-wise multiplication operator and $\beta(T_k,S_k)$ denot
 Instead, their normalized versions $\beta(T_k,S_k)^*$ can be used to make coefficients easily comparable:
 
 ```math 
-\beta(T_k,S_k)^* = \frac{\beta(T_k,S_k)}{\sum_{M_k,Q_k \in N(C_k),(M_k,Q_k) \in E(G)^k} \beta(M_k,Q_k)},
+\beta(T_k,S_k)^* = \frac{\beta(T_k,S_k)}{\sum_{M_k,Q_k \in N(C_k),(M_k,Q_k) \in E(G)^k} \beta(M_k,Q_k)}.
 ```
+
+
 
 ## 2.2. Our interpretation
 
