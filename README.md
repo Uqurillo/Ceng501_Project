@@ -23,12 +23,18 @@ The method has four different parts. It starts with the input and higher-order l
 **Definition.** For an integer $k \geq 2$, we denote any $k$ different connected nodes forming a connected subgraph in $G$ as $C_k=\\{v_1,\ldots,v_k\\}$. We identify $C_k$ as a node in $k$-order graph. $V(G)^k$ is denoted as the set of all nodes of $k$-order graph. The neighborhood of the node $C_k$ is defined as:
 $$N(C_k)=\\{T_k \in V(G)^k | |C_k \bigcap T_k| = k-1\\}.$$
 
-With this definition, we can create higher-order graphs for $k \geq 2$. The next step is to initialize node features of 1-order and higher order graphs. For $i \in V(G)$, the feature embedding $u_i \in ℝ^d$ is the concatanation of two one-hot vectors $e_i \in ℝ^{d_1}$ and $a_i \in ℝ^{d_2}$ based on label and attributes of the node $i$, respectively. Note that $d=d_1+d_2$. For node $C_k$ where $k \geq 2$,
+With this definition, we can create higher-order graphs for $k \geq 2$. 
+
+### 2.1.1. Input and Higher-order Layer
+
+The next step is to initialize node features of 1-order and higher order graphs. For $i \in V(G)$, the feature embedding $u_i \in ℝ^d$ is the concatanation of two one-hot vectors $e_i \in ℝ^{d_1}$ and $a_i \in ℝ^{d_2}$ based on label and attributes of the node $i$, respectively. Note that $d=d_1+d_2$. For node $C_k$ where $k \geq 2$,
 
 ```math
 u(C_k)=\frac{1}{k}\sum_{C_1 \in C_k} u(C_1),
 ```
 that is, $u(C_k)$ is just the average of feature embeddings of the nodes that constitute it.
+
+### 2.1.2. Substructure Interaction Attention Layer
 
 Second step of the method includes Substructure Interaction Attention (SIA) Layer. The main aim is to train $u(C_k)$ for each substructure $C_k \in V(G)^k$ and it is done with the contribution of two parts: the neighbor structure aggregation (sa) and the neighbor interaction aggregation (ia). Let
 
@@ -86,11 +92,17 @@ u(C_k)' = \sigma(\alpha u(C_k)^{'}_{sa} + (1-\alpha)u(C_k)^{'}_{ia}),
 
 where $\alpha$ is a parameter to balance information coming from two parts.
 
-### The Pooling Layer
+### 2.1.3. The Pooling Layer
 
 To classify graphs, we need information based on graph embeddings. This paper fulfills this need by utilizing two graph-level embedding methods: Stability-based Substructure Attention (SSA) pooling and the Max pooling to characterize global and local graph features, respectively.
 
+### SSA Pooling
 
+Suppose that the number of substructures in the graph $G$ is $N$. Note that $G$ doesn't imply the started graph, it can also be a $k$-order graph in this subsection. Let $V(G)$ denote the set of substructures in graph $G$ and $u_n \in ℝ^{1xd}$ show the substructure embedding of $n \in V(G)$. Then, the graph-level embedding $h_G$ is given as:
+
+```math 
+h_G = \sum_{n=1}^N \sigma(u_n ReLU(W_3(u_n^T-\frac{1}{N}\sum_{m=1}^N u_m^T)))u_n,
+```
 
 ## 2.2. Our interpretation
 
