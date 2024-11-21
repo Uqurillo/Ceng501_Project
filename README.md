@@ -121,7 +121,7 @@ for $n \in \\{1,2, \ldots, N\\}$.
 We combine grpah-embeddings learned for different higher_order graphs. For a graph $G$, two graph-level embeddings $h_G$ and $u_G$ of it are obtained in the pooling layer. We concatenate them to obtain $f_G = h_G ||u_G$. Similarly, we can construct ${f_G}^(k)$ for $k$-order graph $G^(k)$ and concatenate all of them to obtain the final graph embedding $F_G$:
 
 $$
-F_G=\\{{f_G}^(1) || {f_G}^(2) || \ldots || {f_G}^(k)\\}.
+F_G=\\{{f_G}^{(1)} || {f_G}^{(2)} || \ldots || {f_G}^{(k)}\\}.
 $$
 
 ## 2.2. Our interpretation
