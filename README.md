@@ -62,6 +62,12 @@ where $a \in ℝ^d$ is the weight vector to obtain a scalar as a result of apply
 
 ### Neighboring Substructure Interaction Aggregation
 
+The neighbor interaction representation of node $C_k$ is given as:
+
+```math 
+u(C_k)^{'}_{ia} = \sum_{T_k \in N(C_k)} \sum_{S_k \in N(C_k)} \beta(T_k,S_k)(u(T_k)*u(S_k)),
+```
+
 ## 2.2. Our interpretation
 
 @TODO: Explain the parts that were not clearly explained in the original paper and how you interpreted them.
