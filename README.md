@@ -124,7 +124,7 @@ $$
 F_G=\\{{f_G}^{(1)} || {f_G}^{(2)} || \ldots || {f_G}^{(k)}\\}.
 $$
 
-As a last step, we put $F_G$ into the MLP layer to predict the class of the graph: $\widehat(y)=MLP(F_G)$.
+As a last step, we put $F_G$ into the MLP layer to predict the class of the graph: $\widehat y=MLP(F_G)$.
 
 ## 2.2. Our interpretation
 
