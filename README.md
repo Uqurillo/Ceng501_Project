@@ -101,7 +101,7 @@ To classify graphs, we need information based on graph embeddings. This paper fu
 Suppose that the number of substructures in the graph $G$ is $N$. Note that $G$ doesn't imply the started graph, it can also be a $k$-order graph in this subsection. Let $V(G)$ denote the set of substructures in graph $G$ and $u_n \in ℝ^{1xd}$ show the substructure embedding of $n \in V(G)$. Then, the graph-level embedding $h_G$ is given as:
 
 ```math 
-h_G = \sum_{n=1}^N \sigma(u_n ReLU(W_3(u_n^T-\frac{1}{N}\sum_{m=1}^N u_m^T)))u_n,
+h_G = \sum_{n=1}^N \sigma\big(u_n ReLU\big(W_3\big(u_n^T-\frac{1}{N}\sum_{m=1}^N u_m^T\big)\big)\big)u_n,
 ```
 
 ## 2.2. Our interpretation
