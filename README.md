@@ -110,9 +110,9 @@ where $W_3 \in ℝ^{dxd}$ is the learnable weight matrix.
 
 Let $V_G \in ℝ^{Nxd}$ mean the matrix representation of substructure embeddings of $G$. We define $u_n=<m_{n1},m_{n2},\ldots,m_{nd}>$. The maximum pooling works on the matrix $V_G$ and takes the maximum of each column and concatenates all of them:
 
-```math 
-u_G = \\{max_n (m_{n1}) || max_n (m_{n2}) || \dots || max_n (m_{nd})\\},
-```
+$$
+u_G = \\{max_n (m_{n1}) || max_n (m_{n2}) || \dots || max_n (m_{nd})\\}
+$$
 
 for $n \in \\{1,2, \ldots, N\\}$.
 ## 2.2. Our interpretation
