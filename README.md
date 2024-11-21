@@ -87,7 +87,7 @@ Instead, their normalized versions $\beta(T_k,S_k)^*$ can be used to make coeffi
 The new representation of $u(C_k)$ which is denoted as $u(C_k)'$ combining neighbor information and neighbor interaction information is defined as:
 
 ```math 
-u(C_k)' = \sigma(\alpha u(C_k)^{'}_{sa} + (1-\alpha)u(C_k)^{'}_{ia}), 
+u(C_k)' = \sigma\big(\alpha u(C_k)^{'}_{sa} + \big(1-\alpha\big)u(C_k)^{'}_{ia}\big), 
 ```
 
 where $\alpha$ is a parameter to balance information coming from two parts.
