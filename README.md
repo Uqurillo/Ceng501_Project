@@ -68,6 +68,14 @@ The neighbor interaction representation of node $C_k$ is given as:
 u(C_k)^{'}_{ia} = \sum_{T_k \in N(C_k)} \sum_{S_k \in N(C_k)} \beta(T_k,S_k)(u(T_k)*u(S_k)),
 ```
 
+where $*$ is the element-wise multiplication operator and $\beta(T_k,S_k)$ denotes the interaction coefficient between nodes $T_k$ and $S_k$. If $(T_k,S_k) \in E(G)^k$, we define $\beta(T_k,S_k)=\alpha(C_k,T_k)\alpha(C_k,S_k)$. Otherwise, it equals to 0.
+
+Instead, their normalized versions $\beta(T_k,S_k)^*$ can be used to make coefficients easily comparable:
+
+```math 
+\beta(T_k,S_k)^* = \frac{\beta(T_k,S_k)}{\sum_{M_k,Q_k \in N(C_k),(M_k,Q_k) \in E(G)^k} \beta(M_k,Q_k)},
+```
+
 ## 2.2. Our interpretation
 
 @TODO: Explain the parts that were not clearly explained in the original paper and how you interpreted them.
