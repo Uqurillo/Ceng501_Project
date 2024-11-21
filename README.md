@@ -76,7 +76,15 @@ Instead, their normalized versions $\beta(T_k,S_k)^*$ can be used to make coeffi
 \beta(T_k,S_k)^* = \frac{\beta(T_k,S_k)}{\sum_{M_k,Q_k \in N(C_k),(M_k,Q_k) \in E(G)^k} \beta(M_k,Q_k)}.
 ```
 
+### Combining Two Parts
 
+The new representation of $u(C_k)$ which is denoted as $u(C_k)'$ combining neighbor information and neighbor interaction information is defined as:
+
+```math 
+u(C_k)' = \sigma(\alpha)u(C_k)^{'}_{sa} + (1\alpha)u(C_k)^{'}_{ia}), 
+```
+
+where $\alpha$ is a parameter to balance information coming from two parts.
 
 ## 2.2. Our interpretation
 
