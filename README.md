@@ -18,7 +18,7 @@ The paper introduces a method contributing to Graph Neural Networks to classify 
 
 ## 2.1. The original method
 
-![Image](./images/Graph.PNG)
+![Image](./images/Method.PNG)
 
 The method has four different parts. It starts with the input and higher-order layer. We are given a graph $G$ which is a pair $(V,E)$ with a set of nodes $V$ and a set of edges $E$ where $E \subseteq \\{ (i,j) | i,j \in V, i \neq j \\} $. $V(G)$ and $E(G)$ denote the set of nodes and edges, respectively. Moreover, define the neighborhood of a node $i$ as $N(i) = \\{ j | (i,j) \in E(G) \\}$ and show the feature embedding encoding attributes of $i$ as $u_i$. After starting with such a graph $G$, substructures of $G$ which are $1$-order substructures are considered and they give $1$-order graph which is $G$ itself. To extract more information about $G$, higher-order graphs are defined in the following way.
 
@@ -129,6 +129,8 @@ $$
 As a last step, we put $F_G$ into the MLP layer to predict the class of the graph: $\widehat y=MLP(F_G)$.
 
 ## 2.2. Our interpretation
+
+![Image](./images/Graph.PNG)
 
 
 # 3. Experiments and results
