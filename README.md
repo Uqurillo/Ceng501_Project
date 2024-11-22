@@ -140,6 +140,12 @@ How to obtain higher-order substructures and $2$-order graph is obvious. However
 
 In the neighboring substructure aggregation part of the SIA Layer, a shared weight matrix $W_1 \in ℝ^{d'xd}$ is used. After the computations, dimension of $u(C_k)^{'}_{sa}$ turns into $d'$. On the other hand, the dimension for interaction is $d$ and we add them up to update the substructure embedding of $C_k$. If $d'=d$, there is nothing to be worried about. Otherwise, a modification is needed to equalise them. One idea is that extending less dimensional information with necessary number of zeros until equalising dimensions.
 
+### Obtaining Global and Local Features of the Graph
+
+It is important to understand how to obtain $u(C_k)$ from the labels and attributes of $C_k$. In the method, it is stated that $u(C_k)$ is constructed from the concatenation of two one-hot vectors constructed from labels and attributes of it. Although obtaining one-hot vector for labels is obvious, for attributes the process is unclear. It depends on the type of the attributes. For instance, if all attributes are categorical, one-hot vector representation of them is valid, but in the case of a numerical attribute, attainability of $u(C_k)$ is controversial.
+
+After learning $u(C_k)^{'}$, the crucial step is to obtain graph embeddings using substructure embeddings. The two methods SSA Pooling and Max Pooling enables us to learn more about graph. SSA Pooling activates the attention mechanism to create an attention to each embedding $u(C_k)$ and combining all the information coming from substructures with attentions leads to learn global features of the graph. Furthermore, Max Pooling selects the maximum values from the components and facilitates highlighting the most prominent local features.
+
 # 3. Experiments and results
 
 ## 3.1. Experimental setup
