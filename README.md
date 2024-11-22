@@ -160,8 +160,8 @@ In the neighboring substructure aggregation part of the SIA Layer, a shared weig
 
 # 5. References
 
-@TODO: Provide your references here.
+1. J. Gao, J. Gao, X. Ying, M. Lu and J. Wang, "Higher-Order Interaction Goes Neural: A Substructure Assembling Graph Attention Network for Graph Classification," in IEEE Transactions on Knowledge and Data Engineering, vol. 35, no. 2, pp. 1594-1608, 1 Feb. 2023, doi: 10.1109/TKDE.2021.3105544. keywords: {Kernel;Graph neural networks;Aggregates;Task analysis;Feature extraction;Proteins;Knowledge discovery;Graph classification;graph attention networks;higher-order graph;substructure interaction},
 
 # Contact
 
-@TODO: Provide your names & email addresses and any other info with which people can contact you.
+Uğur Bektaş Cantürk - ugur98liv92@gmail.com 
