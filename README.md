@@ -130,9 +130,15 @@ As a last step, we put $F_G$ into the MLP layer to predict the class of the grap
 
 ## 2.2. Our interpretation
 
+### In the Figure
+
 ![Image](./images/Graph.PNG)
 
-In the figure, how to obtain higher-order substructures and $2$-order graph is obvious. However, the arrows and painted parts of $2$-order graph interaction needs need more explanation. When we try to get neighboring substructure interaction information for the substructure $CD$, we compute $\beta(T_2,S_2)$ where $T_2$ and $S_2$ are neighbors of $CD$. We know that $\beta(T_2,S_2)$ is non-zero only if $T_2$ and $S_2$ are connected with an edge. In our case, $AC$ and $BC$ are neighbors of $CD$ which are connected. Similar for the pair $DE$ and $DF$. Hence, these pairs are painted to emphasize their interaction on $CD$ with a red arrow showing their contribution. Moreover, black arrows indicate the neighbor relation. In this example, working on $CD$ is just a choice. The similar process will be executed for other substructures to get all the interaction information.
+How to obtain higher-order substructures and $2$-order graph is obvious. However, the arrows and painted parts of $2$-order graph interaction needs need more explanation. When we try to get neighboring substructure interaction information for the substructure $CD$, we compute $\beta(T_2,S_2)$ where $T_2$ and $S_2$ are neighbors of $CD$. We know that $\beta(T_2,S_2)$ is non-zero only if $T_2$ and $S_2$ are connected with an edge. In our case, $AC$ and $BC$ are neighbors of $CD$ which are connected. Similar for the pair $DE$ and $DF$. Hence, these pairs are painted to emphasize their interaction on $CD$ with a red arrow showing their contribution. Moreover, black arrows indicate the neighbor relation. In this example, working on $CD$ is just a choice. The similar process will be executed for other substructures to get all the interaction information.
+
+### About the Dimension of the Matrix W_1
+
+In the neighboring substructure aggregation part of the SIA Layer, a shared weight matrix $W_1 \in ℝ^{d'xd}$ is used. After the computations dimension of $u(C_k)^{'}_{sa}$ turns into $d'$. On the other hand, the dimension of $u(C_k)^{'}_{sa}$ is $d$ and we add them up to update the substructure embedding of $C_k$. If $d'=d$, there is nothing to be worried about. Otherwise, a modification is needed to equalise them. One idea is that extending less dimensional information with necessary number of zeros until equalising dimensions.
 
 # 3. Experiments and results
 
