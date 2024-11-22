@@ -138,7 +138,7 @@ How to obtain higher-order substructures and $2$-order graph is obvious. However
 
 ### About the Dimension of the Matrix W_1
 
-In the neighboring substructure aggregation part of the SIA Layer, a shared weight matrix $W_1 \in ℝ^{d'xd}$ is used. After the computations dimension of $u(C_k)^{'}_{sa}$ turns into $d'$. On the other hand, the dimension of $u(C_k)^{'}_{sa}$ is $d$ and we add them up to update the substructure embedding of $C_k$. If $d'=d$, there is nothing to be worried about. Otherwise, a modification is needed to equalise them. One idea is that extending less dimensional information with necessary number of zeros until equalising dimensions.
+In the neighboring substructure aggregation part of the SIA Layer, a shared weight matrix $W_1 \in ℝ^{d'xd}$ is used. After the computations, dimension of $u(C_k)^{'}_{sa}$ turns into $d'$. On the other hand, the dimension for interaction is $d$ and we add them up to update the substructure embedding of $C_k$. If $d'=d$, there is nothing to be worried about. Otherwise, a modification is needed to equalise them. One idea is that extending less dimensional information with necessary number of zeros until equalising dimensions.
 
 # 3. Experiments and results
 
