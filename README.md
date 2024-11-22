@@ -132,6 +132,7 @@ As a last step, we put $F_G$ into the MLP layer to predict the class of the grap
 
 ![Image](./images/Graph.PNG)
 
+In the figure, how to obtain higher-order substructures and $2$-order graph is obvious. However, the arrows and painted parts of $2$-order graph interaction needs need more explanation. When we try to get neighboring substructure interaction information for the substructure $CD$, we compute $\beta(T_2,S_2)$ where $T_2$ and $S_2$ are neighbors of $CD$. We know that $\beta(T_2,S_2)$ is non-zero if $T_2$ and $S_2$ are connected with an edge. In our case, $AC$ and $BC$ are neighbors of $CD$ which are connected. Similar for the pair $DE$ and $DF$. Hence, these pairs are painted to emphasize their interaction on $CD$ with a red arrow showing their contribution. Moreover, black arrows indicate the neighbor relation.
 
 # 3. Experiments and results
 
