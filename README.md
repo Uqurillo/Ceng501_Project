@@ -57,7 +57,7 @@ u(C_k)^{'}_{sa} = \sum_{T_k \in N(C_k)} \alpha(C_k,T_k) W_1 u(T_k) + \alpha(C_k,
 where $W_1 \in ℝ^{d' x d}$ is a shared weight matrix with the desired dimension $d'$ of $u(C_k)^{'}_{sa}$ and $\alpha(C_k,T_k)$ is the attention coefficient which is computed as follows:
 
 $$
-\alpha(C_k,T_k) = \frac{exp(f(u(C_k),u(T_k)))}{\sum_{T_k \in N(C_k) \cup \\{C_k\\}} exp(f(u(C_k),u(T_k)))},
+\alpha(C_k,T_k) = \frac{exp(f(u(C_k),u(T_k)))}{\sum_{S_k \in N(C_k) \cup \\{C_k\\}} exp(f(u(C_k),u(S_k)))},
 $$
 
 where $f$ is the following feed-forward network with a single hidden layer:
@@ -120,7 +120,7 @@ for $n \in \\{1,2, \ldots, N\\}$.
 
 ### 2.1.4. The Multilayer Perceptron and Output Layer
 
-We combine grpah-embeddings learned for different higher_order graphs. For a graph $G$, two graph-level embeddings $h_G$ and $u_G$ of it are obtained in the pooling layer. We concatenate them to obtain $f_G = h_G ||u_G$. Similarly, we can construct ${f_G}^(k)$ for $k$-order graph $G^(k)$ and concatenate all of them to obtain the final graph embedding $F_G$:
+We combine grpah-embeddings learned for different higher-order graphs. For a graph $G$, two graph-level embeddings $h_G$ and $u_G$ of it are obtained in the pooling layer. We concatenate them to obtain $f_G = h_G ||u_G$. Similarly, we can construct ${f_G}^(k)$ for $k$-order graph $G^(k)$ and concatenate all of them to obtain the final graph embedding $F_G$:
 
 $$
 F_G=\\{{f_G}^{(1)} || {f_G}^{(2)} || \ldots || {f_G}^{(k)}\\}.
