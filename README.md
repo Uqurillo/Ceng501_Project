@@ -120,7 +120,7 @@ for $n \in \\{1,2, \ldots, N\\}$.
 
 ### 2.1.4. The Multilayer Perceptron and Output Layer
 
-We combine grpah-embeddings learned for different higher-order graphs. For a graph $G$, two graph-level embeddings $h_G$ and $u_G$ of it are obtained in the pooling layer. We concatenate them to obtain $f_G = h_G ||u_G$. Similarly, we can construct ${f_G}^(k)$ for $k$-order graph $G^(k)$ and concatenate all of them to obtain the final graph embedding $F_G$:
+We combine grpah-embeddings learned for different higher-order graphs. For a graph $G$, two graph-level embeddings $h_G$ and $u_G$ of it are obtained in the pooling layer. We concatenate them to obtain $f_G = h_G ||u_G$. Similarly, we can construct ${f_G}^{(k)}$ for $k$-order graph $G^{(k)}$ and concatenate all of them to obtain the final graph embedding $F_G$:
 
 $$
 F_G=\\{{f_G}^{(1)} || {f_G}^{(2)} || \ldots || {f_G}^{(k)}\\}.
