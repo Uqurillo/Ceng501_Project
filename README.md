@@ -169,7 +169,7 @@ We concentrated building the model first for $1$-order graphs which are directly
 
 ## 3.3. Results
 
-@TODO: Present your results and compare them to the original paper. Please number your figures & tables as if this is a paper.
+![Image](./images/Firstresults.PNG)
 
 # 4. Conclusion
 
