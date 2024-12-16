@@ -169,7 +169,7 @@ We concentrated building the model first for $1$-order graphs which are directly
 
 ## 3.3. Results
 
-![Image](./images/Firstresults.PNG)
+<img src="images/Firstresults.png" alt="Example Image" width="300">
 
 # 4. Conclusion
 
